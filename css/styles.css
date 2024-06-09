@@ -204,6 +204,7 @@ clear: both;
 .form_intro{
   text-align: left;
   border-color: none;
+  margin-left: 25px;
 
 }
 
@@ -588,4 +589,10 @@ svg{
       width: 25px;
       height: 25px;
   }
+}
+
+.LogoFrancesco{
+  width: 200px;
+  height: 60px;
+
 }

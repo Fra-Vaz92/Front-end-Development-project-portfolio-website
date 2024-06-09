@@ -275,6 +275,7 @@ a {
   .form_intro{
     text-align: left;
     border-color: none;
+    margin-left: 25px;
   
   }
   
@@ -299,6 +300,7 @@ a {
   
   .home_button{
     border-radius: 4px;
+    text-decoration: none;
   }
   
   .form_label{
@@ -708,6 +710,7 @@ a {
   
     .home_button {
         padding: 8px 16px;
+        text-decoration: none;
     }
   }
   
@@ -749,4 +752,10 @@ a {
         width: 25px;
         height: 25px;
     }
+  }
+
+  .LogoFrancesco{
+    width: 200px;
+    height: 70;
+  
   }
