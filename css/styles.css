@@ -36,17 +36,19 @@ h1 {
     font-weight: 700;
   }
 
-  a:hover{
-    color: none;
+  .navigation-list__item:hover{
+    color: blue;
     text-decoration:none;
-    transform: scale(var(--largescale));
   }
 
-  a:visited{
+
+  .navigation-list__item, a:link, a:visited{
+    text-decoration: none;
     color: purple;
+
   }
 
-  a:active{
+  .navigation-list__item, a:link, a:active{
     color: green;
   }
 
@@ -176,9 +178,9 @@ clear: both;
     display: grid;
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0;
- 
+    grid-gap: 40px;
+    margin: 15px;
+
   }
   .grid__item {
     background-color: lightgray;
@@ -186,10 +188,20 @@ clear: both;
     min-height: auto;
     margin: 0;
   }
+
+  .grid__item:hover, .grid__item:focus {
+    background-color: lightgray;
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    transform: scale(var(--largescale));
+  }
+
   .grid__item:last-child {
     grid-column: 3 / 3;
     grid-row: 1 / 3;
   }
+
  }
 
  .navigation_menu{
@@ -272,7 +284,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 38px;
-margin-left: 45.5%;
+margin-left: 45%;
 }
 
 .button-cv:hover, .button-cv:focus{
@@ -302,6 +314,12 @@ button:active{
 
 .works-header{
   font-size: 20px;
+  margin: 17px;
+}
+
+.intro-work-text{
+  text-align: left;
+  margin: 15px;
 }
 
 .about-me-section{
@@ -354,61 +372,12 @@ margin-top: 35PX;
 .button-download{
   text-decoration: none;
 }
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-  .navigation-list {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .navigation-list__item {
-      margin: 10px 0;
-  }
-
-  .page-header {
-      flex-direction: column;
-  }
-
-  .about-header {
-      font-size: 1.8em;
-  }
-
-  .about-p {
-      font-size: 1.1em;
-  }
-
-  .button-cv {
-      padding: 8px 16px;
-  }
-
-  .sun-illustration {
-      display: inline-block;
-      margin: 0 auto;
-  }
-
-  .about-list li {
-      text-align: center;
-      text-align: center;
-      margin-left: -10%;
-  }
-}
-
-svg{
-  position:absolute;
-  max-width: 50px;
-  max-height: 50px;
-  transform: translate(-800%, -800%);
-  left: 75%;
-  margin-top: 35PX;
-  
-  }
   
 /* Small devices (phones, 480px and up) */
-@media (max-width: 480px) {
+@media (max-width: 480px){
   .navigation-list {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
   }
 
@@ -433,6 +402,8 @@ svg{
       display: block; /* Ensure button spans full width if necessary */
       text-align: center;
       margin: 10px auto; /* Center align the button */
+      margin-left: 30%;
+      
   }
 
   .illustration {
@@ -440,9 +411,22 @@ svg{
   }
 
   .sun-illustration {
-      display: inline-block;
+     position: absolute;
       margin: 0 auto;
   }
+
+  .about-me-section p{
+    margin: 5% 5%;
+  }
+
+  svg{
+    position:absolute;
+    max-width: 30px;
+    max-height: 30px;
+    transform: translate(-300%, -750%);
+    left: 75%;
+    margin-top: 35PX;
+    }
 
   .social-media img {
       width: 25px;
@@ -457,20 +441,23 @@ svg{
       text-align: center;
       margin-left: -10%;
   }
+
+  .home_button {
+    padding: 6px 12px;
+    display: block; /* Ensure button spans full width if necessary */
+    text-align: center;
+    margin: 10px auto; /* Center align the button */
 }
 
-svg{
-  position:absolute;
-  max-width: 50px;
-  max-height: 50px;
-  transform: translate(-350%, -800%);
-  left: 72%;
-  margin-top: 35PX;
-  
-  }
+.social-media img {
+    width: 25px;
+    height: 25px;
+}
+
+}
 
 /* Large devices (desktops, 768px and up) */
-@media ((min-width: 769px) and (max-width:1900px)) {
+@media ((min-width: 768px) and (max-width:1024px)) {
   .navigation-list {
       flex-direction: row;
       justify-content: center;
@@ -523,20 +510,21 @@ svg{
       width: 30px;
       height: 30px;
   }
-}
+
 
 svg{
   position:absolute;
   max-width: 50px;
   max-height: 50px;
-  transform: translate(-800%, -800%);
+  transform: translate(-300%, -800%);
   left: 72%;
   margin-top: 35PX;
   
   }
+}
 
   /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media ((min-width: 1025px) and (max-width:1900px)) {
   .navigation-list {
       flex-direction: column;
       align-items: center;
@@ -557,11 +545,31 @@ svg{
   .home_button {
       padding: 8px 16px;
   }
+.button-cv {
+  padding: 12px 24px;
+  margin-left: 45%;
 }
 
-/* Small devices (phones, 480px and up) */
-@media (max-width: 480px) {
+svg{
+  position:absolute;
+  max-width: 50px;
+  max-height: 50px;
+  transform: translate(-400%, -800%);
+  left: 72%;
+  margin-top: 35PX;
+  
+  }
+}
+
+.LogoFrancesco{
+  width: 150px;
+  height: 60px;
+
+}
+
+@media (width: 540px){
   .navigation-list {
+      display: flex;
       flex-direction: column;
       align-items: center;
   }
@@ -574,25 +582,69 @@ svg{
       margin: 10px 0;
   }
 
-  .profile_portrait {
-      max-width: 100px;
+  .about-header {
+      font-size: 1.5em;
   }
 
-  .home_button {
+  .about-p {
+      font-size: 1em;
+  }
+
+  .button-cv {
       padding: 6px 12px;
       display: block; /* Ensure button spans full width if necessary */
       text-align: center;
       margin: 10px auto; /* Center align the button */
+      margin-left: 35%;
+      
   }
+
+  .illustration {
+      width: 100%;
+  }
+
+  .sun-illustration {
+     position: absolute;
+      margin: 0 auto;
+  }
+
+  .about-me-section p{
+    margin: 5% 5%;
+  }
+
+  svg{
+    position:absolute;
+    max-width: 50px;
+    max-height: 50px;
+    transform: translate(-200%, -600%);
+    left: 75%;
+    margin-top: 35PX;
+    }
 
   .social-media img {
       width: 25px;
       height: 25px;
   }
+
+  .about-list {
+      text-align: center;
+  }
+
+  .about-list li {
+      text-align: center;
+      margin-left: -10%;
+  }
+
+  .home_button {
+    padding: 6px 12px;
+    display: block; /* Ensure button spans full width if necessary */
+    text-align: center;
+    margin: 10px auto; /* Center align the button */
 }
 
-.LogoFrancesco{
-  width: 150px;
-  height: 60px;
+.social-media img {
+    width: 25px;
+    height: 25px;
+}
 
 }
