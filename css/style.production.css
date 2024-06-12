@@ -6,7 +6,7 @@
 */
 
 a {
-  color: #357b70;
+  color: blue;
 }
 
 body{
@@ -34,7 +34,7 @@ h1 {
   }
 
   .navigation-list__item, a:link, a:hover{
-    color: purple;
+    color: #357b70;
     text-decoration:underline;
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -45,9 +45,6 @@ h1 {
     text-decoration: none;
   }
 
-  .navigation-list__item, a:link, a:active{
-    color: green;
-  }
 
   a:focus{
     outline: 2px solid blue;
@@ -874,4 +871,9 @@ svg{
     height: 25px;
 }
 
+}
+
+.social-icons{
+  width: 30px;
+  height: 30px;
 }
