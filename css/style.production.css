@@ -34,21 +34,24 @@ h1 {
     font-weight: 700;
   }
 
-  .navigation-list__item:hover{
-    color: #357b70;
-    text-decoration:underline;
-  }
-
-  .navigation-list__item:visited{
-    text-decoration-color: purple;
+    a:link {
+    color: blue;
     text-decoration: underline;
-  }
+    }
 
+  a:visited {
+    text-decoration: underline;
+    }
+
+  a:hover {
+    color: #357b70;
+    text-decoration: underline;
+}
   a:focus{
     outline: 2px solid blue;
   }
 
-
+  
   button{
     background-color: #357b70;
     color: white;
