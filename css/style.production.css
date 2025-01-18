@@ -517,6 +517,10 @@ margin-top: 35PX;
       font-size: 1em;
   }
 
+  .profile_portrait_about{
+    align-items: center;
+  }
+
   .button-cv {
       padding: 6px 12px;
       display: block; /* Ensure button spans full width if necessary */
@@ -817,6 +821,10 @@ svg{
       font-size: 1em;
   }
 
+  .profile_portrait_about{
+    position: center;
+  }
+
   .button-cv {
       padding: 6px 12px;
       display: block; /* Ensure button spans full width if necessary */
@@ -906,7 +914,6 @@ color: aliceblue;
 }
 
 .profile_portrait_about{
-  float: left;
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
@@ -958,4 +965,14 @@ color: aliceblue;
   .h-captcha{
     margin: auto;
     width: 60%;
+  }
+
+  .paragraph-about{
+    text-align: center;
+    font-size: larger;
+  }
+
+ .work-header {
+    text-align: center;
+    font-weight:bolder;
   }
