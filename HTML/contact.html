@@ -38,6 +38,7 @@
         <h4 class="form_intro">I would like to connect with you! Write me a message I'll get in touch soon</h4>  
         <form id="contact" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="8930985f-524f-4b61-9cbe-cd9b477e0483">
+          <input type="hidden" name="debug" value="true">
           <fieldset>
             <label for="Your_Name" class="form_label">Your Name</label>
             <input placeholder="Your name" id="Your_Name" type="text" name="name" tabindex="1" required autofocus class="form-input">
@@ -47,8 +48,8 @@
             <input placeholder="Your Email Address" id="Email_address" type="email" name="email" tabindex="2" required class="form-input">
           </fieldset>
           <fieldset>
-            <label for="Your_message" id="Your_messagge" class="form_label">Your message</label>
-            <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required class="form-input"></textarea>
+            <label for="Your_message" class="form_label">Your message</label>
+            <textarea placeholder="Type your Message Here...." id="Your_messagge" name="message" tabindex="5" required class="form-input"></textarea>
           </fieldset>
           <div class="h-captcha" data-captcha="true" data-sitekey="509ab086-1626-4a2e-9a94-9f002c04c2ba"></div>
           <input type="hidden" name="h-captcha-response">
@@ -75,7 +76,7 @@
           const form = document.getElementById('contact');
           
           form.addEventListener('submit', function(e) {
-          
+            const hCaptchaResponse = hcaptcha.getResponse();
               const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
               const hCaptchaHiddenInput = document.querySelector('input[name="h-captcha-response"]');
           
