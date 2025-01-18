@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css"  href="../css/style.production.css">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
     <title>Contact page Francesco Vazza</title>
 </head>
 <body>
@@ -49,6 +50,7 @@
             <label for="Your_message" id="Your_messagge" class="form_label">Your message</label>
             <textarea placeholder="Type your Message Here...." name="message" tabindex="5" required class="form-input"></textarea>
           </fieldset>
+          <div class="h-captcha" data-captcha="true" data-sitekey="509ab086-1626-4a2e-9a94-9f002c04c2ba"></div>
           <fieldset>
             <button name="Contact me" type="submit" id="contact-submit" data-submit="...Sending" class="form-input">Contact me</button>
           </fieldset>
@@ -67,5 +69,20 @@
           <a href="https://www.linkedin.com/feed/" target="_blank"><img src="../img/linkedin_icon.svg" alt="linkedin icon that redirects to Francesco Vazza Linkedin profile" class="social-icons"></a>
         </div> 
         </footer>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+        <script>
+          const form = document.getElementById('YOUR_FORM_ID');
+          
+          form.addEventListener('submit', function(e) {
+          
+              const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+          
+              if (!hCaptcha) {
+                  e.preventDefault();
+                  alert("Please fill out captcha field")
+                  return
+              }
+          });
+          </script>
 </body>
 </html>
