@@ -68,5 +68,16 @@
           <a href="https://www.linkedin.com/in/francesco-full-stack-web-developer/" target="_blank"><img src="../img/linkedin_icon.svg" alt="linkedin icon that redirects to Francesco Vazza Linkedin profile" class="social-icons"></a>
         </div> 
         </footer>
+        <script>
+          window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // Reset the form if the page is loaded from the cache
+            document.getElementById("contact").reset();
+        } else {
+            // Reset the form on a normal page load
+            document.getElementById("contact").reset();
+          }
+        });
+        </script>
 </body>
 </html>
